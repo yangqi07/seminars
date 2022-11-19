@@ -15,15 +15,29 @@
     #mid{ position:absolute; left:30%; top:20%; width:800px;} 
 #right{ position:absolute; top:23%; right:1%;  } 
 .nav{height:50px;}
-    
+.bj{
+
+position: fixed;  /*将图片固定，不随页面滚动*/
+
+opacity: 0.5;  /*修改透明度*/
+
+height: 100%;
+
+width: 100%;
+
+z-index: -1;  /*将图片放在最底层*/
+
+}
   </style>
 
   <script src="https://unpkg.com/vue"></script>
   <script src="https://unpkg.com/axios/dist/axios.js"></script>
 </head>
 <body>
-  
+
+  <img class="bj" src="images1/海报背景.png ">
   <br/>
+  <div></div>
     <h1 style="text-align:center">Seminar on Discrete geometry and Coding theory </h1>
     <div  id="left"> 
       <p class="nav">  <a href="index.html"><strong>Home</strong> </a></p>
