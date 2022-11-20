@@ -1,21 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
-<head >
-  
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Seminar on Discrete geometry and Coding theory</title>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+  box-sizing: border-box;
+}
 
-  <style>
-    label {
-      display: block;
-    }
-       
-    #left{ position:absolute; top:35%;left:8%; width:300px;} 
-    #mid{ position:absolute; left:22%; top:30%; width:800px;} 
-#right{ position:absolute; top:20%; right:1%;  } 
-.nav{height:50px;}
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+}
+
+html {
+  font-family: "Lucida Sans", sans-serif;
+}
+
+.header {
+  background-color: #6c8ebe;
+  color: #ffffff;
+  padding: 15px;
+}
+
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  padding: 8px;
+  margin-bottom: 7px;
+  background-color: #33b5e5;
+  color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.menu li:hover {
+  background-color: #0099cc;
+}
+
+.aside {
+  background-color: #33b5e5;
+  padding: 15px;
+  color: #ffffff;
+  text-align: center;
+  font-size: 14px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.footer {
+  background-color: #0099cc;
+  color: #ffffff;
+  text-align: center;
+  font-size: 12px;
+  padding: 15px;
+}
+
+/* For mobile phones: */
+[class*="col-"] {
+  width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+  /* 针对平板电脑： */
+  .col-s-1 {width: 8.33%;}
+  .col-s-2 {width: 16.66%;}
+  .col-s-3 {width: 25%;}
+  .col-s-4 {width: 33.33%;}
+  .col-s-5 {width: 41.66%;}
+  .col-s-6 {width: 50%;}
+  .col-s-7 {width: 58.33%;}
+  .col-s-8 {width: 66.66%;}
+  .col-s-9 {width: 75%;}
+  .col-s-10 {width: 83.33%;}
+  .col-s-11 {width: 91.66%;}
+  .col-s-12 {width: 100%;}
+}
+@media only screen and (min-width: 768px) {
+  /* 针对桌面： */
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+}
 .bj{
 
 position: fixed;  /*将图片固定，不随页面滚动*/
@@ -29,60 +111,43 @@ width: 100%;
 z-index: -1;  /*将图片放在最底层*/
 
 }
-td{padding: 5px;}
-  </style>
-<link rel="stylesheet" type="text/scss" href="-sass/hydeout.scss" />
-  <script src="https://unpkg.com/vue"></script>
-  <script src="https://unpkg.com/axios/dist/axios.js"></script>
+td {padding: 5px;
+frame:above;}
+div {padding: 10px;}
+a:link    {color:blue;}
+a:visited {color:#a6a6da;
+  font-weight: bolder;}
+a:hover   {color:rgb(127, 211, 244);
+font-weight: bolder;}
+a:active  {color:yellow;
+font-weight: bolder;}
+</style>
 </head>
 <body>
-  
   <img class="bj" src="images1/海报背景.png"/>
-  <br/>
-  <h1 style="text-align:center">Seminar on Discrete geometry and Coding theory </h1>
-  <div  id="left"> 
-      <p class="nav">  <a href="index.html">Home</a></p>
-    <p class="nav">  <a href="about.html">About</a></p>
-<p class="nav"><a href="upcomingtalks.html">Recent&Upcoming talks</a></p> 
-  <p class="nav"><a href="pasttalks.html"><strong >Past talks</strong> </a></p>
-  <p class="nav"><a href="mailinglist.html">Mailing list</a></p>
+<div class="header">
+  <h1 style="text-align:center">Seminar on Discrete Geometry and Coding theory</h1>
 </div>
 
-<div id="mid">
-<table align="center"><thead ><tr><th >Time&Location</th><th>Topic&Speaker</th>
-</tr></thead><tbody>
-<tr><td style="border-right:1 px red;">This is just a simple sample</td>
+<div class="row">
+  <div class="col-3 col-s-3 menu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="upcomingtalks.html">Recent&Upcoming talks</a></li>
+      <li><a href="pasttalks.html">Past talks</a></li>
+    </ul>
+  </div>
 
- 
-<td>I hope this would be a talk about my recent development of hadwiger covering conjecture <br> Speaker: Yang Qi</td></tr></tbody></table>
-  
-  <br><br><br>  
-  If you are willing to give a talk, please feel free to contact any one of the organizers below or click  <a href="https://docs.google.com/forms/d/1pBILwrJ_S_4v7thqrNspazIKzhW-ybzKY_zlbGjyfQA/edit" target="_blank">here</a>.
-  
-  <p>  
+  <div class="col-6 col-s-9">
     
-    <strong> Organizers </strong>
-  </p>
-  <p>   
-  Lian, Yanlu (Hanzhou Normal University), yllian@hznu.edu.cn
-  </p>
-  <p>   
-  Xue, Fei (Nanjing Normal University), 05429@njnu.edu.cn
-  </p>
-  <p>   
-  Yang, Qi (Chongqing University), yangqi07@foxmail.com
-   </p>
+    <table frame="above"><tr><th>Time&Location</th><th>Topic&Speaker</th></tr>
+      <tr><td>This is just a simple sample</td><td>Hopefully this would be my talk about hadwiger covering conjecture</td></tr></table>
+      
+ 
+
   
 </div>
 
-
-
-
-
-
-
-
-  
 </body>
 </html>
-
